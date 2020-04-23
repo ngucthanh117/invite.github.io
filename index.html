@@ -1,0 +1,124 @@
+<html>
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162932519-1"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-162932519-1');
+    </script>
+
+    <title>FloodCRM Invite Generator</title>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#code').on('click', function() {
+                window.open(
+                    "http://floodcrm.net/user/registration.html?code=" + $('#code').html(),
+                    '_blank'
+                );
+            });
+        });
+
+        function getInvite() {
+            const months = ["3bbff16266c54e995501f932ce2120c7", "Feb787457e4ea2dc7c83a4b8c6157be59feruary", "56db98e09185c64c74f4f894d0646c4b", "6b9d09c47224211263f63cc8a06141a7", "4b6285f0f696936079b14428f56ed173"];
+            const randomMonth = months[Math.floor(Math.random() * months.length)];
+            $("div#main h2").html(randomMonth)
+        }
+    </script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+         :root {
+            font-size: 10px;
+        }
+        
+        body {
+            background: #000;
+        }
+        
+        div#logo {
+            font-family: 'Exo 2', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 10vh;
+        }
+        
+        div#main {
+            font-family: 'Exo 2', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 10vh;
+        }
+        
+        h1 {
+            font-size: 13rem;
+            font-weight: 200;
+            font-style: italic;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .red {
+            color: #f00;
+        }
+        
+        h2 {
+            cursor: pointer;
+            font-size: 3rem;
+            font-weight: 100;
+            font-style: italic;
+            color: #fff;
+        }
+        
+        p {
+            font-size: 2rem;
+            font-weight: 50;
+            color: #fff3;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        button {
+            cursor: pointer;
+            font-size: 3rem;
+            background-color: transparent;
+            font-family: 'Exo 2', sans-serif;
+            color: #fff;
+            text-decoration: none;
+            border: 0px solid;
+            outline: none;
+            transition: .25s;
+        }
+        
+        button:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="logo">
+        <h1>invite.</h1>
+        <h1 class="red">red</h1>
+    </div>
+    <div id="main">
+        <a id="code_a">
+            <h2 id="code">-</h2>
+        </a>
+        <button onclick="getInvite()">Click me to generate a FloodCRM invite</button>
+        <p>invite.red - A 100% FREE FloodCRM invite generator. No captcha. No survey. Just invites for the best mail and SMS flooder.</p>
+    </div>
+</body>
+
+</html>
